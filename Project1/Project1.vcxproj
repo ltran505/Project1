@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="CookieDB.cpp" />
+    <ClCompile Include="CookieList.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Testing.cpp" />
   </ItemGroup>
