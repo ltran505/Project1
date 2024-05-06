@@ -7,3 +7,7 @@
 	CS A250
 	Project (Part B)
 */
+
+#include "CookieList.h"
+
+#include <iostream>
