@@ -130,7 +130,9 @@
     <ClInclude Include="..\..\..\Downloads\CookieDB.h" />
     <ClInclude Include="..\..\..\Downloads\CookieList.h" />
     <ClInclude Include="..\..\..\Downloads\Testing.h" />
-    <ClInclude Include="Cookie.h" />
+    <ClInclude Include="Cookie.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Downloads\CookieDB.cpp" />
