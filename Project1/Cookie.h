@@ -1,8 +1,11 @@
 /*
-	guild, Ryan
+	Guild, Ryan (team lead)
+	Tran, Lily
+	Nguyen, Jordan
+	Aljaffan, Maha
 
 	CS A250
-	Project (Part A)
+	Project (Part B)
 */
 
 #ifndef COOKIE_H

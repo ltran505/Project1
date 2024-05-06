@@ -127,9 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Downloads\CookieDB.h" />
+    <ClInclude Include="..\..\..\Downloads\CookieList.h" />
+    <ClInclude Include="..\..\..\Downloads\Testing.h" />
     <ClInclude Include="Cookie.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Downloads\CookieDB.cpp" />
+    <ClCompile Include="..\..\..\Downloads\Testing.cpp" />
     <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
