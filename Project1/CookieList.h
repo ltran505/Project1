@@ -12,7 +12,6 @@
 #define COOKIELIST_H
 
 
-
 class Node
 {
 public:
@@ -33,25 +32,27 @@ class CookieList
 {
 public:
 	// Default constructor
-
+	CookieList() : first(nullptr), last(nullptr), count(0) {}
 	
 	// Functions addCookie
-
+	void addCookie(const Cookie& newCookie);
 	
 	// Accessor function
-
+	size_t getCount() const { return count; }
 
 	// Boolean functions
-
+	bool isEmpty() const { return count == 0; }
 
 	// Function printAllCookies
-
+	void printAllCookies() const;
 
 	// Function clearList
-
+	void clearList();
 
 	// The Big Three
-
+	CookieList(const CookieList& other); //Copy Constructor
+	CookieList& operator=(const CookieList& rhs); //Overloaded assignment operator
+	~CookieList(); //Destructor
 
 private:
 
