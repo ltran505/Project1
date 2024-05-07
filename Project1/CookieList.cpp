@@ -13,3 +13,11 @@
 #include <iostream>
 
 // Testing
+
+CookieList::~CookieList()
+{
+	if !(this->isEmpty())
+	{
+		this->clearList();
+	}
+}
