@@ -20,4 +20,6 @@ CookieList::~CookieList()
 	{
 		this->clearList();
 	}
+	delete first;
+	first = nullptr;
 }
