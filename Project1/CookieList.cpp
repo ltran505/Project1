@@ -12,6 +12,7 @@
 
 #include <iostream>
 
+using namespace std;
 
 // Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
@@ -56,6 +57,7 @@ bool CookieList::isEmpty() const {
 
 bool CookieList::searchCookie(const std::string& cookieName) const
 {
+	return false; //not correct code just testing
 	// Code here
 }
 
