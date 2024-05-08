@@ -40,5 +40,43 @@ int main()
     printAllCookies(myCookieList);
     cout << endl; 
 	
+    // Search for the Snickerdoodle cookie
+    bool found = myCookieList.searchCookie("Snickerdoodle");
+    cout << "Search for Snickerdoodle: " << (found ? "Found" : "Not Found") << endl;
+
+    // Search for a non-existent cookie
+    found = myCookieList.searchCookie("Peanut Butter");
+    cout << "Search for Peanut Butter: " << (found ? "Found" : "Not Found") << endl;
+
+    // Test the copy constructor
+    CookieList copiedList(myCookieList);
+    cout << "Contents of the copied list:" << endl;
+    printAllCookies(copiedList);
+    cout << endl;
+
+    // Clear the original list
+    myCookieList.clearList();
+    cout << "Original list after clearing:" << endl;
+    printAllCookies(myCookieList);
+    cout << "Copied list should still have cookies:" << endl;
+    printAllCookies(copiedList);
+    cout << endl;
+
+    // Test the assignment operator
+    CookieList anotherList;
+    anotherList.addCookie("Macadamia Nut", 220, 1, { "Flour", "Sugar", "Macadamia Nuts" });
+    anotherList = myCookieList;  // myCookieList is currently empty
+    cout << "After assignment from an empty list:" << endl;
+    printAllCookies(anotherList);
+    cout << endl;
+
+    // Re-populate myCookieList and assign again
+    createCookieList(myCookieList);
+    anotherList = myCookieList;
+    cout << "After re-populating and re-assigning:" << endl;
+    printAllCookies(anotherList);
+    cout << endl;
+
+
 	return 0;
 }
