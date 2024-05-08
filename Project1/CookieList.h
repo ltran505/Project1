@@ -61,7 +61,7 @@ public:
 	CookieList(const CookieList& other); 
 
 	// Overloaded assignment operator
-	CookieList& operator=(const CookieList& rhs); 
+	CookieList& operator=(const CookieList& cookieToAssign); 
 
 	// Destructor
 	~CookieList();

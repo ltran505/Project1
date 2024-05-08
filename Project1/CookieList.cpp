@@ -57,7 +57,7 @@ CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr),
 	// Code here
 }
 
-CookieList& CookieList::operator=(const CookieList& rhs)
+CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	// TODO: insert return statement here
 }
