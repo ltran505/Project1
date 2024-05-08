@@ -38,20 +38,6 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 	addCookie(newCookie);
 }
 
-void CookieList::clearList()
-{
-	Node* current = first;
-	while (current != nullptr) 
-	{
-		Node* next = current->getNext();
-		delete current;
-		current = next;
-	}
-	first = nullptr;
-	last = nullptr;
-	count = 0;
-}
-
 size_t CookieList::getCount() const 
 {
 	return count;
@@ -95,6 +81,20 @@ void CookieList::printAllCookies() const
 		}
 	}
 	
+}
+
+void CookieList::clearList()
+{
+	Node* current = first;
+	while (current != nullptr)
+	{
+		Node* next = current->getNext();
+		delete current;
+		current = next;
+	}
+	first = nullptr;
+	last = nullptr;
+	count = 0;
 }
 
 CookieList::CookieList(const CookieList& other)
