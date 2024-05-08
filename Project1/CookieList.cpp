@@ -89,16 +89,19 @@ void CookieList::printAllCookies() const
 	}
 }
 
-// Copy Constructor
-CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0)
-{
-	// Code here
+// CookieList's Copy Constructor
+CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0) {
+	Node* current = other.first;
+	while (current != nullptr) {
+		const Cookie& cookie = current->getCookie();
+		addCookie(cookie.getName(), cookie.getCalories(), cookie.getServings(), cookie.getIngredients()); // Correctly passing parameters to addCookie
+		current = current->getNext();
+	}
 }
 
-// 
+
 CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
-	// TODO: insert return statement here
 	if (&cookieToAssign != this)
 	{
 	    Node *othertemp = cookieToAssign.first;
