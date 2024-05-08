@@ -17,6 +17,11 @@ using namespace std;
 // Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
+void CookieList::addCookie(const Cookie& newCookie)
+{
+	last = new Node(newCookie, nullptr);
+}
+
 void CookieList::addCookie(const std::string& name, size_t calories,
 			size_t servings, const std::set<std::string>& ingredients)
 {
