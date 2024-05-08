@@ -14,8 +14,6 @@
 
 using namespace std;
 
-CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
-
 void CookieList::addCookie(const Cookie& newCookie)
 {
 	Node* newNode = new Node(newCookie, nullptr);
@@ -47,7 +45,7 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 		last->setNext(newNode);
 		last = newNode;
 	}
-	++count;
+	count++;
 }
 
 void CookieList::clearList()

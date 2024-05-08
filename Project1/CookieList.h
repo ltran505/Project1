@@ -33,8 +33,8 @@ class CookieList
 {
 public:
 
-	CookieList();
-	
+	CookieList() : first(nullptr), last(nullptr), count(0) {}
+
 	void addCookie(const Cookie& newCookie);
 	void addCookie(const std::string& name, size_t calories,
 		size_t servings, const std::set<std::string>& ingredients);
