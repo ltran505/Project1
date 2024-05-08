@@ -12,6 +12,8 @@
 #define COOKIELIST_H
 
 #include "Cookie.h"
+#include <string>
+#include <set>
 
 class Node
 {
@@ -36,7 +38,7 @@ public:
 	CookieList();
 	
 	// Functions addCookie
-	void addCookie(const Cookie& newCookie);
+	void addCookie(std::string& const, int, int, std::set<std::string>& const) const;
 	
 	// Accessor function
 	size_t getCount() const;
