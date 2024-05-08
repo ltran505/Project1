@@ -34,6 +34,17 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 	++count;
 }
 
+Cookie* CookieList::getCookie(const std::string& cookieName) const {
+	Node* current = first;
+	while (current != nullptr) {
+		if (current->getCookie().getName() == cookieName) {
+			return &(current->getCookie()); // Return a pointer to the Cookie object
+		}
+		current = current->getNext(); // Move to the next node
+	}
+	return nullptr; // Return nullptr if no cookie with the given name is found
+}
+
 void CookieList::clearList()
 {
 	Node* current = first;
@@ -79,10 +90,16 @@ CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr),
 	// Code here
 }
 
-// 
-CookieList& CookieList::operator=(const CookieList& cookieToAssign)
-{
-	// TODO: insert return statement here
+CookieList& CookieList::operator=(const CookieList& cookieToAssign) {
+	if (this != &cookieToAssign) {  // Protect against self-assignment
+		clearList();  // Clear current contents
+		Node* current = cookieToAssign.first;
+		while (current != nullptr) {
+			//addCookie();  // Copy each cookie
+			current = current->getNext();
+		}
+	}
+	return *this;
 }
 
 // Destructor

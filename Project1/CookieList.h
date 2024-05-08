@@ -42,6 +42,7 @@ public:
 	void addCookie(const std::string& name, size_t calories, size_t servings, const std::set<std::string>& ingredients);
 	
 	// Accessor function
+	Cookie* getCookie(const std::string& cookieName) const;
 	size_t getCount() const;
 
 	// isEmpty function
