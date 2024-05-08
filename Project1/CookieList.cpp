@@ -13,6 +13,22 @@
 #include <iostream>
 
 // Testing
+void CookieList::clearList()
+{
+	Node* current = first;
+	while (current != nullptr) {
+		Node* next = current->getNext();
+		delete current;
+		current = next;
+	}
+	first = nullptr;
+	last = nullptr;
+	count = 0;
+}
+
+size_t CookieList::getCount() const {
+	return count;
+}
 
 CookieList::~CookieList()
 {

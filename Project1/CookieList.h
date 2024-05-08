@@ -11,6 +11,7 @@
 #ifndef COOKIELIST_H
 #define COOKIELIST_H
 
+#include "Cookie.h"
 
 class Node
 {
