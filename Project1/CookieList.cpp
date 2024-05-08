@@ -83,6 +83,21 @@ CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr),
 CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	// TODO: insert return statement here
+	if (&cookieToAssign != this)
+	{
+	    Node *othertemp = cookieToAssign.first;
+		first = othertemp;
+		Node *temp = first;
+		while (temp != nullptr && othertemp != nullptr)
+		{
+		    temp->setNext(othertemp->getNext());
+		    temp = tempt->getNext();
+		    othertemp = othertemp->getNext();
+		}
+		count = cookieToAssign.count;
+	}
+	else
+		cerr << "Attempted assignment to self.";
 }
 
 // Destructor
