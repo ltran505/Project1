@@ -1,5 +1,5 @@
 /*
-	Guild, Ryan (team lead)
+	Guild, Ryan (team leader)
 	Tran, Lily
 	Nguyen, Jordan
 	Aljaffan, Maha

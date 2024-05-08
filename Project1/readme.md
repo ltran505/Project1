@@ -1,3 +1,13 @@
+/*
+	Guild, Ryan (team leader)
+	Tran, Lily
+	Nguyen, Jordan
+	Aljaffan, Maha
+
+	CS A250
+	Project (Part B)
+*/
+
 Project (Part B1)
 
 [DONE] Implementation of the CookieList Class	(Ryan)
