@@ -57,9 +57,14 @@ public:
 	void clearList();
 
 	// The Big Three
-	CookieList(const CookieList& other); //Copy Constructor
-	CookieList& operator=(const CookieList& rhs); //Overloaded assignment operator
-	~CookieList(); //Destructor
+	// Copy Constructor
+	CookieList(const CookieList& other); 
+
+	// Overloaded assignment operator
+	CookieList& operator=(const CookieList& rhs); 
+
+	// Destructor
+	~CookieList();
 
 private:
 
