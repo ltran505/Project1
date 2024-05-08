@@ -21,15 +21,15 @@ void CookieList::addCookie(const Cookie& newCookie)
 {
 	Node* newNode = new Node(newCookie, nullptr);
 
-	if (count = 0)
-	{
-		first, last = newNode;
-	}else
-	{
+	if (count == 0) {
+		first = newNode;
+		last = newNode;
+	}
+	else {
 		last->setNext(newNode);
 		last = newNode;
 	}
-	++count;
+	count++;
 }
 
 void CookieList::addCookie(const std::string& name, size_t calories,
@@ -94,14 +94,23 @@ bool CookieList::searchCookie(const std::string& cookieName) const {
 
 void CookieList::printAllCookies() const
 {
-	Node* current = first;
-
 	cout << "Cookie Names: ";
-	while (current != nullptr)
+
+	if (this->isEmpty())
 	{
-		cout << current->getCookie().getName() << endl;
-		current = current->getNext();
+		cout << "The list is empty.";
 	}
+	else
+	{
+		Node* current = first;
+		
+		while (current != nullptr)
+		{
+			cout << current->getCookie().getName() << endl;
+			current = current->getNext();
+		}
+	}
+	
 }
 
 // CookieList's Copy Constructor
