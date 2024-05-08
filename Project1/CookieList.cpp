@@ -23,7 +23,8 @@ void CookieList::addCookie(const Cookie& newCookie)
 		first = newNode;
 		last = newNode;
 	}
-	else {
+	else 
+	{
 		last->setNext(newNode);
 		last = newNode;
 	}
@@ -40,7 +41,8 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 	{
 		first = newNode;
 		last = newNode;
-	}else
+	}
+	else
 	{
 		last->setNext(newNode);
 		last = newNode;
