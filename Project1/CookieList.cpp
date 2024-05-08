@@ -125,7 +125,7 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 		while (temp != nullptr && othertemp != nullptr)
 		{
 		    temp->setNext(othertemp->getNext());
-		    temp = tempt->getNext();
+		    temp = temp->getNext();
 		    othertemp = othertemp->getNext();
 		}
 
