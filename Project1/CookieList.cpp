@@ -14,7 +14,6 @@
 
 using namespace std;
 
-// Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
 void CookieList::addCookie(const Cookie& newCookie)
@@ -50,21 +49,25 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 	++count;
 }
 
-Cookie* CookieList::getCookie(const std::string& cookieName) const {
+Cookie* CookieList::getCookie(const std::string& cookieName) const 
+{
 	Node* current = first;
-	while (current != nullptr) {
-		if (current->getCookie().getName() == cookieName) {
-			return &(current->getCookie()); // Return a pointer to the Cookie object
+	while (current != nullptr) 
+	{
+		if (current->getCookie().getName() == cookieName) 
+		{
+			return &(current->getCookie());
 		}
-		current = current->getNext(); // Move to the next node
+		current = current->getNext();
 	}
-	return nullptr; // Return nullptr if no cookie with the given name is found
+	return nullptr;
 }
 
 void CookieList::clearList()
 {
 	Node* current = first;
-	while (current != nullptr) {
+	while (current != nullptr) 
+	{
 		Node* next = current->getNext();
 		delete current;
 		current = next;
@@ -74,23 +77,27 @@ void CookieList::clearList()
 	count = 0;
 }
 
-size_t CookieList::getCount() const {
+size_t CookieList::getCount() const 
+{
 	return count;
 }
 
-bool CookieList::isEmpty() const {
+bool CookieList::isEmpty() const 
+{
 	return count == 0;
 }
 
-bool CookieList::searchCookie(const std::string& cookieName) const {
+bool CookieList::searchCookie(const std::string& cookieName) const 
+{
 	Node* current = first;
 	while (current != nullptr) {
-		if (current->getCookie().getName() == cookieName) { // Assuming Cookie class has a getName() method
-			return true; // Cookie found, return true
+		if (current->getCookie().getName() == cookieName) 
+		{
+			return true;
 		}
-		current = current->getNext(); // Move to next node
+		current = current->getNext();
 	}
-	return false; // Cookie not found after traversing the list
+	return false;
 }
 
 void CookieList::printAllCookies() const
@@ -114,13 +121,13 @@ void CookieList::printAllCookies() const
 	
 }
 
-// CookieList's Copy Constructor
 CookieList::CookieList(const CookieList& other)
 {
 	Node* current = other.first;
-	while (current != nullptr) {
+	while (current != nullptr) 
+	{
 		const Cookie& cookie = current->getCookie();
-		addCookie(cookie.getName(), cookie.getCalories(), cookie.getServings(), cookie.getIngredients()); // Correctly passing parameters to addCookie
+		addCookie(cookie.getName(), cookie.getCalories(), cookie.getServings(), cookie.getIngredients());
 		current = current->getNext();
 	}
 }
@@ -134,7 +141,7 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 		Node* current = cookieToAssign.first;
 		while (current != nullptr)
 		{
-			addCookie(current->getCookie());  // This assumes addCookie(const Cookie&) works correctly
+			addCookie(current->getCookie());
 			current = current->getNext();
 		}
 	}

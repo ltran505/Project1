@@ -20,7 +20,7 @@ class Cookie
 public:
 	Cookie() : name("NA"), calories(0), servings(0) {}
 	Cookie(const std::string& newName, size_t newCalories,
-		size_t newServings, const std::set<std::string> newIngredients) :
+		size_t newServings, const std::set<std::string> newIngredients)
 		name(newName), calories(newCalories), servings(newServings),
 		ingredients(newIngredients) {}
 
@@ -40,11 +40,11 @@ public:
 	void printCalories() const;
 
 	~Cookie() {}
-
 private:
 	std::string name;
 	size_t calories;
 	size_t servings;
 	std::set<std::string> ingredients;
 };
+
 #endif
