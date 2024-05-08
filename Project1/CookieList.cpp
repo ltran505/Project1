@@ -146,7 +146,7 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 		}
 	}
 	else
-		cerr << "Attempted assignment to self.";
+		cerr << "Attempted assignment to itself.";
 	
 	return *this;
 }
