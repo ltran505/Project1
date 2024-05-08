@@ -9,34 +9,36 @@
 */
 
 #include "Cookie.h"
+#include "CookieList.h"
+#include "Testing.h"
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+
+void printAllCookies(const CookieList& list) {
+	list.printAllCookies();
+}
+
 int main()
 {
-	Cookie aCookie;
-	aCookie.printRecipe();
-	aCookie.printCalories();
-	aCookie.printIngredients();
+    CookieList myCookieList;
+
+    createCookieList(myCookieList);
+
+    cout << "All cookies in the list:" << endl;
+    printAllCookies(myCookieList);
+    cout << endl;
+
+    Cookie myCookie("Snickerdoodle", 150, 2, { "Flour", "Sugar", "Cinnamon" });
+
+    myCookieList.addCookie("Snickerdoodle", 150, 2, { "Flour", "Sugar", "Cinnamon" });
+
+    cout << "After adding Snickerdoodle:" << endl;
+    printAllCookies(myCookieList);
+    cout << endl; 
 	
-	aCookie.setName("Lemon Square Bars");
-	aCookie.setCalories(140);
-	aCookie.setServings(30);
-
-	vector<string> newSteps{ "Flour", "Sugar", "Butter", "Eggs", "Lemon Juice" };
-	aCookie.setIngredients(newSteps);
-
-	aCookie.printRecipe();
-	aCookie.printCalories();
-	aCookie.printIngredients();
-
-	Cookie aCookieTwo("Chocolate Chip", 1000, 20, { "Flour", "Sugar", "Eggs", "Butter", "Chocolate" });
-	aCookieTwo.printRecipe();
-	aCookieTwo.printCalories();
-	aCookieTwo.printIngredients();
-
 	return 0;
 }
