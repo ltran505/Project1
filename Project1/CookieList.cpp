@@ -130,6 +130,28 @@ CookieList::CookieList(const CookieList& other)
 		addCookie(cookie.getName(), cookie.getCalories(), cookie.getServings(), cookie.getIngredients());
 		current = current->getNext();
 	}
+
+	CookieList::CookieList(const CookieList & other)
+	{
+
+		if (this->isEmpty())
+		{
+			clearList();
+		}
+
+		Node* current = other.first;
+		first = current;
+		while (current != nullptr)
+		{
+			const Cookie& aCookie = current->getCookie();
+			this->addCookie(aCookie);
+			current = current->getNext();
+		}
+		count = other.count;
+		Node* newLast = other.last;
+		last = newLast;
+	}
+
 }
 
 
