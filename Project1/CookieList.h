@@ -33,16 +33,16 @@ class CookieList
 {
 public:
 	// Default constructor
-	CookieList() : first(nullptr), last(nullptr), count(0) {}
+	CookieList();
 	
 	// Functions addCookie
 	void addCookie(const Cookie& newCookie);
 	
 	// Accessor function
-	size_t getCount() const {}
+	size_t getCount() const;
 
 	// Boolean functions
-	bool isEmpty() const {}
+	bool isEmpty() const;
 
 	// Function printAllCookies
 	void printAllCookies() const;
