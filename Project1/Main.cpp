@@ -53,6 +53,7 @@ int main()
     myCookieList.clearList();
     cout << "Original list after clearing:" << endl;
     myCookieList.printAllCookies();
+    cout << endl;
     cout << "Copied list should still have cookies:" << endl;
     copiedList.printAllCookies();
     cout << endl;

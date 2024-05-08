@@ -96,7 +96,7 @@ void CookieList::printAllCookies() const
 {
 	Node* current = first;
 
-	cout << "Cookie Names:";
+	cout << "Cookie Names: ";
 	while (current != nullptr)
 	{
 		cout << current->getCookie().getName() << endl;
@@ -105,7 +105,8 @@ void CookieList::printAllCookies() const
 }
 
 // CookieList's Copy Constructor
-CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0) {
+CookieList::CookieList(const CookieList& other)
+{
 	Node* current = other.first;
 	while (current != nullptr) {
 		const Cookie& cookie = current->getCookie();
