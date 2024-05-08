@@ -128,7 +128,6 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 		cerr << "Attempted assignment to itself.";
 	}
 
-	
 	return *this;
 }
 
