@@ -19,7 +19,17 @@ CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
 void CookieList::addCookie(const Cookie& newCookie)
 {
-	last = new Node(newCookie, nullptr);
+	Node* newNode = new Node(newCookie, nullptr);
+
+	if (count = 0)
+	{
+		first, last = newNode;
+	}else
+	{
+		last->setNext(newNode);
+		last = newNode;
+	}
+	count++;
 }
 
 void CookieList::addCookie(const std::string& name, size_t calories,
