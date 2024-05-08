@@ -61,7 +61,7 @@ void Cookie::setIngredients(const vector<string>& newIngredients)
 		ingredients.clear();
 	}
 	size_t size = newIngredients.size();
-	for (int i = 0; i < size; ++i)
+	for (size_t i = 0; i < size; ++i)
 	{
 		ingredients.insert(newIngredients[i]);
 	}
