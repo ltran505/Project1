@@ -12,8 +12,6 @@
 #define COOKIELIST_H
 
 #include "Cookie.h"
-#include <string>
-#include <set>
 
 class Node
 {
@@ -35,38 +33,23 @@ class CookieList
 {
 public:
 
-	// Default constructor
 	CookieList();
 	
-	// Functions addCookie
 	void addCookie(const Cookie& newCookie);
 	void addCookie(const std::string& name, size_t calories,
 		size_t servings, const std::set<std::string>& ingredients);
 
-	// Accessor function
-	Cookie* getCookie(const std::string& cookieName) const;
 	size_t getCount() const;
 
-	// isEmpty function
 	bool isEmpty() const;
-
-	// search cookie function
 	bool searchCookie(const std::string& cookieName) const;
 
-	// Function printAllCookies
 	void printAllCookies() const;
 
-	// Function clearList
 	void clearList();
 
-	// The Big Three
-	// Copy Constructor
 	CookieList(const CookieList& other); 
-
-	// Overloaded assignment operator
 	CookieList& operator=(const CookieList& cookieToAssign); 
-
-	// Destructor
 	~CookieList();
 
 private:
