@@ -11,6 +11,8 @@
 #include "CookieList.h"
 
 #include <iostream>
+// Default Constructor
+CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
 void CookieList::clearList()
 {

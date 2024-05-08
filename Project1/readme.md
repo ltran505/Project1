@@ -16,8 +16,7 @@ Function addCookie (overloaded) (Maha)
 
 [DONE] Function getCount (Ryan)
 
-Function isEmpty (Lily)
-	Returns true if the list is empty and false otherwise.
+[DONE] Function isEmpty (Lily)
 
 Function searchCookie (Jordan)
 	Parameter: a string storing a cookie name.
@@ -29,7 +28,7 @@ Function printAllCookies (Maha)
 
 [DONE] Function clearList (Ryan)
 
-[DONE Destructor (Lily)
+[DONE] Destructor (Lily)
 
 Copy constructor (Jordan)
 	Parameter: an object of the CookieList class.
