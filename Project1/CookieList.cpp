@@ -71,7 +71,7 @@ size_t CookieList::getCount() const
 
 bool CookieList::isEmpty() const 
 {
-	return count == 0;
+	return (count == 0);
 }
 
 bool CookieList::searchCookie(const std::string& cookieName) const
