@@ -16,9 +16,21 @@
 // Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
-void CookieList::addCookie(const std::string& name, size_t calories, size_t servings, const std::set<std::string>& ingredients)
+void CookieList::addCookie(const std::string& name, size_t calories,
+			size_t servings, const std::set<std::string>& ingredients)
 {
-	//Code here
+	Cookie newCookie(name, calories, servings, ingredients);
+	Node* newNode = new Node(newCookie, nullptr);
+
+	if (count == 0)
+	{
+		first, last = newNode;
+	}else
+	{
+		last->setNext(newNode);
+		last = newNode;
+	}
+	++count;
 }
 
 void CookieList::clearList()
