@@ -22,8 +22,6 @@ These are the functions we need to implement in the CookieList class:
 
 [DONE] Destructor (Lily)
 
-Copy constructor (Jordan)
-	Parameter: an object of the CookieList class.
-	Using the member function addCookie() that passes a Cookie object, copy each Cookie object from the parameter list into the calling list. Do NOT forget that this is a constructor. What does this mean? It means that you need to initialize the member variables before you can start copying.
+[DONE] Copy constructor (Jordan)
 
 [DONE] Overloaded assignment operator (Maha)
