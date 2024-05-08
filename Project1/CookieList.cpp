@@ -35,19 +35,7 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 		size_t servings, const std::set<std::string>& ingredients)
 {
 	Cookie newCookie(name, calories, servings, ingredients);
-	Node* newNode = new Node(newCookie, nullptr);
-
-	if (count == 0)
-	{
-		first = newNode;
-		last = newNode;
-	}
-	else
-	{
-		last->setNext(newNode);
-		last = newNode;
-	}
-	count++;
+	addCookie(newCookie);
 }
 
 void CookieList::clearList()
