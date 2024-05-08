@@ -108,37 +108,17 @@ void CookieList::printAllCookies() const
 	
 }
 
-//CookieList::CookieList(const CookieList& other)
-//{
-//	Node* current = other.first;
-//	while (current != nullptr) 
-//	{
-//		const Cookie& cookie = current->getCookie();
-//		addCookie(cookie.getName(), cookie.getCalories(), 
-//				cookie.getServings(), cookie.getIngredients());
-//		current = current->getNext();
-//	}
-//
-//}
 CookieList::CookieList(const CookieList& other)
 {
-
-	if (this->isEmpty())
-	{
-		clearList();
-	}
-
+	first = nullptr;
+	last = nullptr;
+	count = 0;
 	Node* current = other.first;
-	first = current;
 	while (current != nullptr)
 	{
-		const Cookie& aCookie = current->getCookie();
-		this->addCookie(aCookie);
+		addCookie(current->getCookie());
 		current = current->getNext();
 	}
-	count = other.count;
-	Node* newLast = other.last;
-	last = newLast;
 }
 
 
