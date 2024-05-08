@@ -61,7 +61,14 @@ bool CookieList::searchCookie(const std::string& cookieName) const
 
 void CookieList::printAllCookies() const
 {
-	// Code here
+	Node* current = first;
+
+	cout << "Cookie Names:";
+	while (current != nullptr)
+	{
+		cout << current->getCookie().getName() << endl;
+		current = current->getNext();
+	}
 }
 
 CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0)
