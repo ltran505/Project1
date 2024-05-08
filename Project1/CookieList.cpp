@@ -52,16 +52,19 @@ void CookieList::printAllCookies() const
 	// Code here
 }
 
+// Copy Constructor
 CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0)
 {
 	// Code here
 }
 
+// 
 CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	// TODO: insert return statement here
 }
 
+// Destructor
 CookieList::~CookieList()
 {
 	if (!this->isEmpty())
