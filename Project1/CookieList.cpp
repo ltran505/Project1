@@ -32,7 +32,7 @@ void CookieList::addCookie(const Cookie& newCookie)
 }
 
 void CookieList::addCookie(const std::string& name, size_t calories,
-			size_t servings, const std::set<std::string>& ingredients)
+		size_t servings, const std::set<std::string>& ingredients)
 {
 	Cookie newCookie(name, calories, servings, ingredients);
 	Node* newNode = new Node(newCookie, nullptr);
@@ -49,7 +49,7 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 	++count;
 }
 
-Cookie* CookieList::getCookie(const std::string& cookieName) const 
+Cookie* CookieList::getCookie(const std::string& cookieName) const
 {
 	Node* current = first;
 	while (current != nullptr) 
@@ -87,7 +87,7 @@ bool CookieList::isEmpty() const
 	return count == 0;
 }
 
-bool CookieList::searchCookie(const std::string& cookieName) const 
+bool CookieList::searchCookie(const std::string& cookieName) const
 {
 	Node* current = first;
 	while (current != nullptr) {
@@ -102,7 +102,7 @@ bool CookieList::searchCookie(const std::string& cookieName) const
 
 void CookieList::printAllCookies() const
 {
-	cout << "Cookie Names: ";
+	cout << "Cookie Names: " << endl;
 
 	if (this->isEmpty())
 	{
@@ -127,7 +127,8 @@ CookieList::CookieList(const CookieList& other)
 	while (current != nullptr) 
 	{
 		const Cookie& cookie = current->getCookie();
-		addCookie(cookie.getName(), cookie.getCalories(), cookie.getServings(), cookie.getIngredients());
+		addCookie(cookie.getName(), cookie.getCalories(), 
+				cookie.getServings(), cookie.getIngredients());
 		current = current->getNext();
 	}
 }

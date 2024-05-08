@@ -12,8 +12,6 @@
 #define COOKIELIST_H
 
 #include "Cookie.h"
-#include <string>
-#include <set>
 
 class Node
 {
@@ -41,7 +39,7 @@ public:
 	// Functions addCookie
 	void addCookie(const Cookie& newCookie);
 	void addCookie(const std::string& name, size_t calories,
-		size_t servings, const std::set<std::string>& ingredients);
+	size_t servings, const std::set<std::string>& ingredients);
 
 	// Accessor function
 	Cookie* getCookie(const std::string& cookieName) const;
