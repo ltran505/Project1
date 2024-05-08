@@ -25,6 +25,13 @@ void CookieList::clearList()
 	count = 0;
 }
 
+size_t CookieList::getCount() const {
+	return count;
+}
+
+bool CookieList::isEmpty() const {
+	return count == 0;
+}
 
 CookieList::~CookieList()
 {

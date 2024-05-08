@@ -39,10 +39,10 @@ public:
 	void addCookie(const Cookie& newCookie);
 	
 	// Accessor function
-	size_t getCount() const { return count; }
+	size_t getCount() const {}
 
 	// Boolean functions
-	bool isEmpty() const { return count == 0; }
+	bool isEmpty() const {}
 
 	// Function printAllCookies
 	void printAllCookies() const;
