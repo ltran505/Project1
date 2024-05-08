@@ -12,7 +12,6 @@
 
 #include <iostream>
 
-// Testing
 void CookieList::clearList()
 {
 	Node* current = first;
@@ -28,6 +27,10 @@ void CookieList::clearList()
 
 size_t CookieList::getCount() const {
 	return count;
+}
+
+bool CookieList::isEmpty() const {
+	return count == 0;
 }
 
 CookieList::~CookieList()

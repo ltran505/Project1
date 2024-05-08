@@ -1,6 +1,6 @@
 Project (Part B1)
 
-Implementation of the CookieList Class	(Ryan)
+[DONE] Implementation of the CookieList Class	(Ryan)
 
 These are the functions we need to implement in the CookieList class:
 
@@ -14,8 +14,7 @@ Function addCookie (Jordan)
 Function addCookie (overloaded) (Maha)
 	Parameters (in this order): a string storing the cookie name, a variable of size_t storing the number of calories, a variable of size_t storing the number of servings, and an STL set of type string storing all ingredients, and Inserts a new node at the end of the list.
 
-Function getCount (Ryan)
-	Returns the number of nodes in the list.
+[DONE] Function getCount (Ryan)
 
 Function isEmpty (Lily)
 	Returns true if the list is empty and false otherwise.
@@ -28,11 +27,9 @@ Function searchCookie (Jordan)
 Function printAllCookies (Maha)
 	Prints all cookies by name. Do not worry about other printing details; those will be addressed later.
 
-Function clearList (Ryan)
-	Deletes all the nodes in the list and resets the member variables to their default value. Note that the object still exists; you are just emptying it by deleting the nodes. 
+[DONE] Function clearList (Ryan)
 
-Destructor (Lily)
-	If the list is not empty, it calls the clearList function.
+[DONE Destructor (Lily)
 
 Copy constructor (Jordan)
 	Parameter: an object of the CookieList class.
