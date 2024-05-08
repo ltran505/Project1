@@ -66,10 +66,15 @@ bool CookieList::isEmpty() const {
 	return count == 0;
 }
 
-bool CookieList::searchCookie(const std::string& cookieName) const
-{
-	return false; //not correct code just testing
-	// Code here
+bool CookieList::searchCookie(const std::string& cookieName) const {
+	Node* current = first;
+	while (current != nullptr) {
+		if (current->getCookie().getName() == cookieName) { // Assuming Cookie class has a getName() method
+			return true; // Cookie found, return true
+		}
+		current = current->getNext(); // Move to next node
+	}
+	return false; // Cookie not found after traversing the list
 }
 
 void CookieList::printAllCookies() const
