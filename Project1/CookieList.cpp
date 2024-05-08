@@ -40,7 +40,8 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 
 	if (count == 0)
 	{
-		first, last = newNode;
+		first = newNode;
+		last = newNode;
 	}else
 	{
 		last->setNext(newNode);
@@ -129,36 +130,13 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	if (&cookieToAssign != this)
 	{
-	    Node *othertemp = cookieToAssign.first;
-		first = othertemp;
-		Node *temp = first;
-		while (temp != nullptr && othertemp != nullptr)
+		clearList();
+		Node* current = cookieToAssign.first;
+		while (current != nullptr)
 		{
-		    temp->setNext(othertemp->getNext());
-		    temp = temp->getNext();
-		    othertemp = othertemp->getNext();
+			addCookie(current->getCookie());  // This assumes addCookie(const Cookie&) works correctly
+			current = current->getNext();
 		}
-
-		if (cookieToAssign.count < count)
-		{
-	        	while (temp != nullptr) {
-	        		Node* next = temp->getNext();
-	        		delete temp;
-	        		temp = next;
-		        }
-		}
-		else
-		{
-		    while (othertemp != nullptr)
-		    {
-    		    temp->setNext(othertemp);
-    		    temp = temp->getNext();
-    		    othertemp = othertemp->getNext();
-		    }
-		}
-		
-		last = cookieToAssign.last;
-		count = cookieToAssign.count;
 	}
 	else
 		cerr << "Attempted assignment to self.";
@@ -169,10 +147,5 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 // Destructor
 CookieList::~CookieList()
 {
-	if (!this->isEmpty())
-	{
-		this->clearList();
-	}
-	delete first;
-	first = nullptr;
+	clearList();
 }
