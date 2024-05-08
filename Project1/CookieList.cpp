@@ -20,7 +20,8 @@ void CookieList::addCookie(const Cookie& newCookie)
 {
 	Node* newNode = new Node(newCookie, nullptr);
 
-	if (count == 0) {
+	if (count == 0) 
+	{
 		first = newNode;
 		last = newNode;
 	}
@@ -47,20 +48,6 @@ void CookieList::addCookie(const std::string& name, size_t calories,
 		last = newNode;
 	}
 	++count;
-}
-
-Cookie* CookieList::getCookie(const std::string& cookieName) const
-{
-	Node* current = first;
-	while (current != nullptr) 
-	{
-		if (current->getCookie().getName() == cookieName) 
-		{
-			return &(current->getCookie());
-		}
-		current = current->getNext();
-	}
-	return nullptr;
 }
 
 void CookieList::clearList()
@@ -152,7 +139,6 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 	return *this;
 }
 
-// Destructor
 CookieList::~CookieList()
 {
 	clearList();
