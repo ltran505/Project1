@@ -65,7 +65,8 @@ bool CookieList::isEmpty() const
 bool CookieList::searchCookie(const std::string& cookieName) const
 {
 	Node* current = first;
-	while (current != nullptr) {
+	while (current != nullptr) 
+	{
 		if (current->getCookie().getName() == cookieName) 
 		{
 			return true;
