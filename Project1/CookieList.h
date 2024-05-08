@@ -34,6 +34,7 @@ private:
 class CookieList
 {
 public:
+
 	// Default constructor
 	CookieList();
 	
@@ -43,8 +44,11 @@ public:
 	// Accessor function
 	size_t getCount() const;
 
-	// Boolean functions
+	// isEmpty function
 	bool isEmpty() const;
+
+	// search cookie function
+	bool searchCookie(const std::string& cookieName) const;
 
 	// Function printAllCookies
 	void printAllCookies() const;

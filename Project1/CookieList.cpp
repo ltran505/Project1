@@ -11,6 +11,8 @@
 #include "CookieList.h"
 
 #include <iostream>
+
+
 // Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
@@ -40,14 +42,19 @@ bool CookieList::isEmpty() const {
 	return count == 0;
 }
 
+bool CookieList::searchCookie(const std::string& cookieName) const
+{
+	// Code here
+}
+
 void CookieList::printAllCookies() const
 {
-	//Code here
+	// Code here
 }
 
 CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0)
 {
-	//Code here
+	// Code here
 }
 
 CookieList& CookieList::operator=(const CookieList& rhs)
