@@ -17,11 +17,6 @@
 
 using namespace std;
 
-
-void printAllCookies(const CookieList& list) {
-	list.printAllCookies();
-}
-
 int main()
 {
     CookieList myCookieList;
@@ -29,7 +24,7 @@ int main()
     createCookieList(myCookieList);
 
     cout << "All cookies in the list:" << endl;
-    printAllCookies(myCookieList);
+    myCookieList.printAllCookies();
     cout << endl;
 
     Cookie myCookie("Snickerdoodle", 150, 2, { "Flour", "Sugar", "Cinnamon" });
@@ -37,7 +32,7 @@ int main()
     myCookieList.addCookie("Snickerdoodle", 150, 2, { "Flour", "Sugar", "Cinnamon" });
 
     cout << "After adding Snickerdoodle:" << endl;
-    printAllCookies(myCookieList);
+    myCookieList.printAllCookies();
     cout << endl; 
 	
     // Search for the Snickerdoodle cookie
@@ -51,15 +46,15 @@ int main()
     // Test the copy constructor
     CookieList copiedList(myCookieList);
     cout << "Contents of the copied list:" << endl;
-    printAllCookies(copiedList);
+    copiedList.printAllCookies();
     cout << endl;
 
     // Clear the original list
     myCookieList.clearList();
     cout << "Original list after clearing:" << endl;
-    printAllCookies(myCookieList);
+    myCookieList.printAllCookies();
     cout << "Copied list should still have cookies:" << endl;
-    printAllCookies(copiedList);
+    copiedList.printAllCookies();
     cout << endl;
 
     // Test the assignment operator
@@ -67,14 +62,14 @@ int main()
     anotherList.addCookie("Macadamia Nut", 220, 1, { "Flour", "Sugar", "Macadamia Nuts" });
     anotherList = myCookieList;  // myCookieList is currently empty
     cout << "After assignment from an empty list:" << endl;
-    printAllCookies(anotherList);
+    anotherList.printAllCookies();
     cout << endl;
 
     // Re-populate myCookieList and assign again
     createCookieList(myCookieList);
     anotherList = myCookieList;
     cout << "After re-populating and re-assigning:" << endl;
-    printAllCookies(anotherList);
+    anotherList.printAllCookies();
     cout << endl;
 
 
