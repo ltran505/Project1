@@ -14,6 +14,11 @@
 // Default Constructor
 CookieList::CookieList() : first(nullptr), last(nullptr), count(0) {}
 
+void CookieList::addCookie(const std::string& name, size_t calories, size_t servings, const std::set<std::string>& ingredients)
+{
+	//Code here
+}
+
 void CookieList::clearList()
 {
 	Node* current = first;
@@ -33,6 +38,21 @@ size_t CookieList::getCount() const {
 
 bool CookieList::isEmpty() const {
 	return count == 0;
+}
+
+void CookieList::printAllCookies() const
+{
+	//Code here
+}
+
+CookieList::CookieList(const CookieList& other) : first(nullptr), last(nullptr), count(0)
+{
+	//Code here
+}
+
+CookieList& CookieList::operator=(const CookieList& rhs)
+{
+	// TODO: insert return statement here
 }
 
 CookieList::~CookieList()
