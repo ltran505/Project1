@@ -35,5 +35,23 @@ void displayMenu()
 // Definition function processChoice
 void processChoice(CookieList& cookieList)
 {
-	// Your code here...
+	cout << "Enter your choice: ";
+	char selection;
+	cin >> selection;
+	switch (selection)
+	{
+	case 'e': cout << "Thank you for using our software. Good bye!";
+		break;
+	default: cout << "  => Sorry. That is not a selection.\n\n"
+		<< string(62, '=') << "\n" << "Would you like to try again (y/n)? ";
+		char again;
+		cin >> again;
+		if (again == 'y')
+			displayMenu();
+		else
+			cout << "Thank you for using our software. Good bye!";
+
+		break;
+	}
+
 }
