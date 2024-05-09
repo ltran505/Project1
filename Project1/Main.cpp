@@ -11,6 +11,7 @@
 #include "Cookie.h"
 #include "CookieList.h"
 #include "Testing.h"
+#include "Interface.h"
 
 #include <iostream>
 #include <string>
@@ -19,7 +20,7 @@ using namespace std;
 
 int main()
 {
-    CookieList myCookieList;
+    /*CookieList myCookieList;
 
     createCookieList(myCookieList);
 
@@ -69,7 +70,11 @@ int main()
     createCookieList(myCookieList);
     anotherList = myCookieList;
     cout << "After re-populating and re-assigning:" << endl;
-    anotherList.printAllCookies();
+    anotherList.printAllCookies();*/
+
+    CookieList myCookieList;
+    createCookieList(myCookieList);
+    displayMenu();
     cout << endl;
 
 	return 0;
