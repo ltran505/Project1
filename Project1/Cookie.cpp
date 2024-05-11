@@ -70,15 +70,19 @@ void Cookie::setIngredients(const vector<string>& newIngredients)
 
 void Cookie::printRecipe() const
 {
-	cout << name << " " << endl;
+	cout << "\n    Recipe for " << name << "\n"
+		<< "    Servings: " << getServings() << "\n";
+	printIngredients();
 }
 
 void Cookie::printIngredients() const
 {
+	cout << "    Ingredients: " << *getIngredients().begin();
 	for (string element : ingredients)
 	{
-		cout << element << endl;
+		cout << ", " << element;
 	}
+	cout << "\n";
 }
 
 void Cookie::printCalories() const

@@ -45,6 +45,8 @@ public:
 	bool searchCookie(const std::string& cookieName) const;
 
 	void printAllCookies() const;
+	void printCookiesSelection() const;
+	void printRecipe(size_t cookieSelection) const;
 
 	void clearList();
 
@@ -57,6 +59,7 @@ private:
 	Node* first;
 	Node* last;
 	size_t count;
+	Node* getCookieLocation(size_t selection) const;
 };
 
 #endif

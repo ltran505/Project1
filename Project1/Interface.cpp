@@ -19,8 +19,8 @@ using namespace std;
 void displayMenu()
 {
     cout << string(62, '*') << "\n"
-        << string(24, ' ') << "COOKIE RECIPES" << string(24, ' ') << "\n"
-        << string(62, '*') << "\n\n"
+        << string(24, ' ') << "COOKIE RECIPES" << string(24, ' ') 
+        << "\n" << string(62, '*') << "\n\n"
         << "Select one of the following: \n\n"
         << "    a. Print all recipes \n" 
         << "    b. Print cookie recipe \n"
@@ -32,18 +32,31 @@ void displayMenu()
 // Definition function processChoice
 void processChoice(CookieList& cookieList)
 {
-    char selection;
+    char mainSelection;
     bool keepGoing = true;
 
     cout << "\nEnter your choice: ";
-    cin >> selection;
+    cin >> mainSelection;
 
     while (keepGoing)
     {
-        switch (selection)
+        switch (mainSelection)
         {
         case 'a':
             cookieList.printAllCookies();
+            cout << "\n" << string(62, '=') << "\n\n"
+                << "Would you like to continue (y/n)? ";
+            break;
+        case 'b':
+            cout << "\n" << string(62, '-') << "\n"
+                << "    COOKIE RECIPE    "
+                << "\n" << string(62, '-') << "\n\n"
+                << "Choose a cookie to view the recipe.\n\n";
+            cookieList.printCookiesSelection();
+            cout << "\nSelect the cookie: ";
+            size_t cookieSelection;
+            cin >> cookieSelection;
+            cookieList.printRecipe(cookieSelection);
             cout << "\n" << string(62, '=') << "\n\n";
             cout << "Would you like to continue (y/n)? ";
             break;
@@ -53,20 +66,18 @@ void processChoice(CookieList& cookieList)
             break;
         default:
             cout << "\n  => Sorry. That is not a selection.\n\n"
-                << string(62, '=') << "\n\n"
-                << "Would you like to try again (y/n)? ";
+                 << string(62, '=') << "\n\n"
+                 << "Would you like to try again (y/n)? ";
             break;
         }
         if (keepGoing)
         {
             char tryAgain;
             cin >> tryAgain;
-            cout << "\n";
-
             if (tryAgain == 'n')
             {
                 keepGoing = false;
-                cout << "Thank you for using our software. Good bye!";
+                cout << "\nThank you for using our software. Good bye!";
             }
             else if (tryAgain == 'y')
             {
@@ -76,4 +87,5 @@ void processChoice(CookieList& cookieList)
             }
         }
     }
+
 }

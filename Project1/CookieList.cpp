@@ -84,6 +84,23 @@ void CookieList::printAllCookies() const
 	}
 }
 
+void CookieList::printCookiesSelection() const
+{
+	Node* current = first;
+	size_t index = 1;
+
+	while (current != nullptr) {
+		std::cout << "    " << index << ": " << current->getCookie().getName() << "\n";
+		current = current->getNext();
+		++index;
+	}
+}
+
+void CookieList::printRecipe(size_t cookieSelection) const
+{
+	getCookieLocation(cookieSelection-1)->getCookie().printRecipe();
+}
+
 void CookieList::clearList()
 {
 	Node* current = first;
@@ -135,4 +152,18 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 CookieList::~CookieList()
 {
 	clearList();
+}
+
+Node* CookieList::getCookieLocation(size_t selection) const
+{
+	Node* current = first;
+	size_t index = 0;
+
+	while (current != nullptr && index < selection)
+	{
+		current = current->getNext();
+		++index;
+	}
+
+	return current;
 }
