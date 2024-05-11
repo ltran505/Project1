@@ -128,7 +128,6 @@ CookieList::CookieList(const CookieList& other)
 	}
 }
 
-
 CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	if (&cookieToAssign != this)
