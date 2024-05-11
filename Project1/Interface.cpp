@@ -73,5 +73,6 @@ void processChoice(CookieList& cookieList)
             displayMenu();
             processChoice(cookieList);
         }
+        break;
     }
 }
