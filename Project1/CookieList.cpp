@@ -64,11 +64,13 @@ bool CookieList::searchCookie(const std::string& cookieName) const
 
 void CookieList::printAllCookies() const
 {
-	cout << "Cookie Names: " << endl;
+	cout << "\n" << string(62, '-') << "\n"
+		<< "    COOKIE RECIPES    \n"
+		<< string(62, '-') << "\n\n";
 
 	if (this->isEmpty())
 	{
-		cout << "The list is empty.";
+		cout << "The list is empty.\n";
 	}
 	else
 	{
@@ -76,11 +78,10 @@ void CookieList::printAllCookies() const
 		
 		while (current != nullptr)
 		{
-			cout << current->getCookie().getName() << endl;
+			cout << "    " << current->getCookie().getName() << "\n";
 			current = current->getNext();
 		}
 	}
-	
 }
 
 void CookieList::clearList()
