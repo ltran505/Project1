@@ -57,22 +57,23 @@ void processChoice(CookieList& cookieList)
                 << "Would you like to try again (y/n)? ";
             break;
         }
-
-        char tryAgain;
-        cin >> tryAgain;
-        cout << endl;
-
-        if (tryAgain == 'n')
+        if (keepGoing)
         {
-            cout << "Thank you for using our software. Good bye!";
-            keepGoing = false; // Exit the loop
+            char tryAgain;
+            cin >> tryAgain;
+            cout << "\n";
+
+            if (tryAgain == 'n')
+            {
+                keepGoing = false;
+                cout << "Thank you for using our software. Good bye!";
+            }
+            else if (tryAgain == 'y')
+            {
+                keepGoing = false;
+                displayMenu();
+                processChoice(cookieList);
+            }
         }
-        else if (tryAgain == 'y')
-        {
-            keepGoing = false;
-            displayMenu();
-            processChoice(cookieList);
-        }
-        break;
     }
 }
