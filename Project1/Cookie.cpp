@@ -71,7 +71,7 @@ void Cookie::setIngredients(const vector<string>& newIngredients)
 void Cookie::printRecipe() const
 {
 	cout << "\n    Recipe for " << name << "\n"
-		<< "    Servings: " << getServings() << "\n";
+		<< "        Servings: " << getServings() << "\n    ";
 	printIngredients();
 }
 

@@ -1,11 +1,70 @@
 /*
-	Guild, Ryan (team leader)
-	Tran, Lily
-	Nguyen, Jordan
-	Aljaffan, Maha
+    Guild, Ryan (team leader)
+    Tran, Lily
+    Nguyen, Jordan
+    Aljaffan, Maha
 
-	CS A250
-	Project (Part B)
+    CS A250
+    Project (Part D)
+
+    1. SELECTION NAME: Print cookie recipe and calories
+    2. PURPOSE: This selection will print a list of cookies,
+    ask the user to choose one, and based on the user's choice,
+    it will print the servings, the needed ingredients,
+    and the calories.
+    Assumption: User chooses one of the cookies.
+    3. EXPECTED OUTPUT:
+
+    **************************************************************
+                        COOKIE RECIPES
+    **************************************************************
+
+    Select one of the following:
+
+        a. Print all recipes
+        b. Print cookie recipe
+        c. Print cookie calories
+        d. Print limited calories
+        e. Print cookie recipe and calories
+        f. To exit
+
+    Enter your choice: e
+
+    --------------------------------------------------------------
+        COOKIE RECIPE
+    --------------------------------------------------------------
+
+    Choose a cookie to view the recipe.
+
+        1: Lemon Square Bars
+        2: Biscotti
+        3: Nutella Brownies
+        4: Butter Snow Flakes
+        5: Chocolate Chip Cookies
+        6: Oatmeal Cookies
+        7: Walnut Tassies
+        8: Jam Thumbprints
+        9: Gingersnaps
+        10: Meringues
+        11: Pizzelles
+        12: Snickerdoodles
+
+    Select the cookie: 1
+
+        Recipe for Lemon Square Bars
+            Servings: 32
+            Ingredients: butter, butter, eggs, flour, lemon juice, sugar
+            Calories: 136
+
+    ==============================================================
+
+    Would you like to continue (y/n)?
+
+    4. TEST CASES:
+            Choice 1 (first)
+            Choice 5 (something in the middle)
+            Choice 12 (last)
+
 */
 
 #include "Interface.h"
@@ -26,7 +85,8 @@ void displayMenu()
         << "    b. Print cookie recipe \n"
         << "    c. Print cookie calories \n"
         << "    d. Print limited calories \n" 
-        << "    e. To exit \n";
+        << "    e. Print cookie recipe and calories \n"
+        << "    f. To exit \n";
 }
 
 // Definition function processChoice
@@ -86,6 +146,20 @@ void processChoice(CookieList& cookieList)
                  << "Would you like to continue (y/n)? ";
             break;
         case 'e':
+            cout << "\n" << string(62, '-') << "\n"
+                << "    COOKIE RECIPE AND CALORIES   "
+                << "\n" << string(62, '-') << "\n\n"
+                << "Choose a cookie # to view the recipe" 
+                << "and number of calories.\n\n";
+            cookieList.printCookiesSelection();
+            cout << "\nYour choice: ";
+            cin >> cookieSelection;
+            cookieList.printRecipe(cookieSelection);
+            cookieList.printCaloriesOnly(cookieSelection);
+            cout << "\n" << string(62, '=') << "\n\n";
+            cout << "Would you like to continue (y/n)? ";
+            break;
+        case 'f':
             cout << "\nThank you for using our software. Good bye!\n";
             keepGoing = false; // Exit the loop
             break;
