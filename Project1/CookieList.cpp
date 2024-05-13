@@ -170,3 +170,19 @@ void CookieList::printCalories(size_t selection) const
 		<< " (Calories: " << cookieChoice.getCalories()
 		<< ")" << endl;
 }
+
+void CookieList::printLimitedCalories(size_t maxCalories) const
+{
+	Node* current = first;
+
+	while (current != nullptr)
+	{
+		const Cookie& cookie = current->getCookie();
+		if (cookie.getCalories() <= maxCalories)
+		{
+			cout << "    " << cookie.getName() << " (calories: "
+				<< cookie.getCalories() << ") \n";
+		}
+		current = current->getNext();
+	}
+}
