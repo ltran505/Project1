@@ -47,6 +47,7 @@ public:
 	void printAllCookies() const;
 	void printCookiesSelection() const;
 	void printRecipe(size_t cookieSelection) const;
+	void printCalories(size_t cookieSelection) const;
 
 	void clearList();
 
