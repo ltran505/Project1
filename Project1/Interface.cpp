@@ -60,6 +60,19 @@ void processChoice(CookieList& cookieList)
             cout << "\n" << string(62, '=') << "\n\n";
             cout << "Would you like to continue (y/n)? ";
             break;
+        case 'c':
+            cout << "\n" << string(62, '-') << "\n"
+                << "    COOKIE CALORIES    "
+                << "\n" << string(62, '-') << "\n\n"
+                << "Choose a cookie # to view number of calories.\n\n";
+            cookieList.printCookiesSelection();
+            cout << "\nYour choice: ";
+            cin >> cookieSelection;
+            cout << "\n";
+            cookieList.printCalories(cookieSelection);
+            cout << "\n" << string(62, '=') << "\n\n";
+            cout << "Would you like to continue (y/n)? ";
+            break;
         case 'e':
             cout << "\nThank you for using our software. Good bye!\n";
             keepGoing = false; // Exit the loop
