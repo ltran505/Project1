@@ -68,20 +68,14 @@ void CookieList::printAllCookies() const
 		<< "    COOKIE RECIPES    \n"
 		<< string(62, '-') << "\n\n";
 
-	if (this->isEmpty())
-	{
-		cout << "The list is empty.\n";
-	}
-	else
-	{
 		Node* current = first;
 		
-		while (current != nullptr)
-		{
-			cout << "    " << current->getCookie().getName() << "\n";
-			current = current->getNext();
-		}
+	while (current != nullptr)
+	{
+		cout << "    " << current->getCookie().getName() << "\n";
+		current = current->getNext();
 	}
+	
 }
 
 void CookieList::printCookiesSelection() const
@@ -90,15 +84,16 @@ void CookieList::printCookiesSelection() const
 	size_t index = 1;
 
 	while (current != nullptr) {
-		std::cout << "    " << index << ": " << current->getCookie().getName() << "\n";
+		cout << "    " << index << ": "
+			<< current->getCookie().getName() << "\n";
 		current = current->getNext();
 		++index;
 	}
 }
 
-void CookieList::printRecipe(size_t cookieSelection) const
+void CookieList::printRecipe(size_t selection) const
 {
-	getCookieLocation(cookieSelection-1)->getCookie().printRecipe();
+	getCookieLocation(--selection)->getCookie().printRecipe();
 }
 
 void CookieList::clearList()
@@ -169,16 +164,9 @@ Node* CookieList::getCookieLocation(size_t selection) const
 
 void CookieList::printCalories(size_t selection) const
 {
-	Node* cookieNode = getCookieLocation(--selection);
+	const Cookie& cookieChoice = getCookieLocation(--selection)->getCookie();
 
-	if (cookieNode != nullptr)
-	{
-		cout << "    " << cookieNode->getCookie().getName()
-			<< " (Calories: " << cookieNode->getCookie().getCalories()
-			<< ")" << endl;
-	}
-	else
-	{
-		cerr << "Error: Cookie not found in the list." << endl;
-	}
+	cout << "    " << cookieChoice.getName()
+		<< " (Calories: " << cookieChoice.getCalories()
+		<< ")" << endl;
 }
