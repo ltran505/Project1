@@ -166,3 +166,19 @@ Node* CookieList::getCookieLocation(size_t selection) const
 
 	return current;
 }
+
+void CookieList::printCalories(size_t selection) const
+{
+	Node* cookieNode = getCookieLocation(--selection);
+
+	if (cookieNode != nullptr)
+	{
+		cout << "    " << cookieNode->getCookie().getName()
+			<< " (Calories: " << cookieNode->getCookie().getCalories()
+			<< ")" << endl;
+	}
+	else
+	{
+		cerr << "Error: Cookie not found in the list." << endl;
+	}
+}
