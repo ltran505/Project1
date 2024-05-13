@@ -83,7 +83,7 @@ void processChoice(CookieList& cookieList)
             cout << "\n";
             cookieList.printLimitedCalories(maxCalories);
             cout << "\n" << string(62, '=') << "\n\n";
-            cout << "Would you like to continue (y/n)? ";
+                 << "Would you like to continue (y/n)? ";
             break;
         case 'e':
             cout << "\nThank you for using our software. Good bye!\n";
