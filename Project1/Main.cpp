@@ -26,5 +26,7 @@ int main()
     displayMenu();
     processChoice(myCookieList);
 	cout << endl;
+
+	system("Pause");
 	return 0;
 }
