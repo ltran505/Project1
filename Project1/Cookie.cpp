@@ -77,10 +77,12 @@ void Cookie::printRecipe() const
 
 void Cookie::printIngredients() const
 {
-	cout << "    Ingredients: " << *getIngredients().begin();
-	for (string element : ingredients)
-	{
-		cout << ", " << element;
+	auto it = ingredients.begin();
+	cout << "    Ingredients: " << *it;
+	it++;
+	while (it != ingredients.end()) { 
+		cout << ", " << *it; 
+		++it;
 	}
 	cout << "\n";
 }
