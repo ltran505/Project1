@@ -49,7 +49,6 @@ public:
 	void printRecipe(size_t cookieSelection) const;
 	void printCalories(size_t cookieSelection) const;
 	void printLimitedCalories(size_t maxCalories) const;
-	void printCaloriesOnly(size_t cookieSelection) const;
 
 	void clearList();
 

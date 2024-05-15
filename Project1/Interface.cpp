@@ -155,7 +155,7 @@ void processChoice(CookieList& cookieList)
             cout << "\nYour choice: ";
             cin >> cookieSelection;
             cookieList.printRecipe(cookieSelection);
-            cookieList.printCaloriesOnly(cookieSelection);
+            cookieList.printCalories(cookieSelection);
             cout << "\n" << string(62, '=') << "\n\n";
             cout << "Would you like to continue (y/n)? ";
             break;
