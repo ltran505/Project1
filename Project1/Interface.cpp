@@ -113,7 +113,7 @@ void processChoice(CookieList& cookieList)
                 << "\n" << string(62, '-') << "\n\n"
                 << "Choose a cookie to view the recipe.\n\n";
             cookieList.printCookiesSelection();
-            cout << "\nSelect the cookie: ";
+            cout << "\nYour choice: ";
             size_t cookieSelection;
             cin >> cookieSelection;
             cookieList.printRecipe(cookieSelection);
@@ -160,7 +160,7 @@ void processChoice(CookieList& cookieList)
             cout << "Would you like to continue (y/n)? ";
             break;
         case 'f':
-            cout << "\nThank you for using our software. Good bye!\n";
+            cout << "\nThank you for using our software. Good bye!";
             keepGoing = false; // Exit the loop
             break;
         default:
