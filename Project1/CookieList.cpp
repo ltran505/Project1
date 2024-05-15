@@ -168,7 +168,7 @@ void CookieList::printCalories(size_t selection) const
 
 	cout << "    " << cookieChoice.getName()
 		<< " (calories: " << cookieChoice.getCalories()
-		<< ")" << endl;
+		<< ")" << '\n';
 }
 
 void CookieList::printLimitedCalories(size_t maxCalories) const
@@ -180,8 +180,7 @@ void CookieList::printLimitedCalories(size_t maxCalories) const
 		const Cookie& cookie = current->getCookie();
 		if (cookie.getCalories() <= maxCalories)
 		{
-			cout << "    " << cookie.getName() << " (calories: "
-				<< cookie.getCalories() << ") \n";
+			cookie.printCalories();
 		}
 		current = current->getNext();
 	}
