@@ -89,5 +89,5 @@ void Cookie::printIngredients() const
 
 void Cookie::printCalories() const
 {
-	cout << calories << endl;
+	cout << calories;
 }
