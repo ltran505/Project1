@@ -160,8 +160,8 @@ void processChoice(CookieList& cookieList)
             cout << "Would you like to continue (y/n)? ";
             break;
         case 'f':
+            keepGoing = false;
             cout << "\nThank you for using our software. Good bye!";
-            keepGoing = false; // Exit the loop
             break;
         default:
             cout << "\n  => Sorry. That is not a selection.\n\n"
