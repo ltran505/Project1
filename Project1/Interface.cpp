@@ -53,8 +53,8 @@
 
         Recipe for Lemon Square Bars
             Servings: 32
-            Ingredients: butter, butter, eggs, flour, lemon juice, sugar
-            Calories: 136
+            Ingredients: butter, eggs, flour, lemon juice, sugar
+            Lemon Square Bars (calories: 136)
 
     ==============================================================
 
@@ -155,6 +155,7 @@ void processChoice(CookieList& cookieList)
             cout << "\nYour choice: ";
             cin >> cookieSelection;
             cookieList.printRecipe(cookieSelection);
+            cout << "    ";
             cookieList.printCalories(cookieSelection);
             cout << "\n" << string(62, '=') << "\n\n";
             cout << "Would you like to continue (y/n)? ";
