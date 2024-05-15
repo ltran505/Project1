@@ -181,6 +181,7 @@ void processChoice(CookieList& cookieList)
             else if (tryAgain == 'y')
             {
                 keepGoing = false;
+                cout << '\n';
                 displayMenu();
                 processChoice(cookieList);
             }
