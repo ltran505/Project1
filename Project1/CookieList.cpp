@@ -127,7 +127,8 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 {
 	if (&cookieToAssign != this)
 	{
-		clearList();
+		if (first != nullptr)
+			clearList();
 		Node* current = cookieToAssign.first;
 		while (current != nullptr)
 		{
