@@ -146,7 +146,9 @@ CookieList& CookieList::operator=(const CookieList& cookieToAssign)
 
 CookieList::~CookieList()
 {
-	clearList();
+	if (count > 0) {
+		clearList();
+	}
 }
 
 Node* CookieList::getCookieLocation(size_t selection) const
