@@ -80,7 +80,8 @@ void Cookie::printIngredients() const
 	auto it = ingredients.begin();
 	cout << "    Ingredients: " << *it;
 	it++;
-	while (it != ingredients.end()) { 
+	auto end = ingredients.end();
+	while (it != end) { 
 		cout << ", " << *it; 
 		++it;
 	}
