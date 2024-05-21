@@ -92,7 +92,7 @@ void displayMenu()
 // Definition function processChoice
 void processChoice(CookieList& cookieList)
 {
-    char mainSelection;
+    char mainSelection = 'z';
     bool keepGoing = true;
 
     cout << "\nEnter your choice: ";
@@ -172,7 +172,7 @@ void processChoice(CookieList& cookieList)
         }
         if (keepGoing)
         {
-            char tryAgain;
+            char tryAgain = 'z';
             cin >> tryAgain;
             if (tryAgain == 'n')
             {
