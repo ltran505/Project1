@@ -149,7 +149,7 @@ void processChoice(CookieList& cookieList)
             cout << "\n" << string(62, '-') << "\n"
                 << "    COOKIE RECIPE AND CALORIES   "
                 << "\n" << string(62, '-') << "\n\n"
-                << "Choose a cookie # to view the recipe" 
+                << "Choose a cookie # to view the recipe " 
                 << "and number of calories.\n\n";
             cookieList.printCookiesSelection();
             cout << "\nYour choice: ";
