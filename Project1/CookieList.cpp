@@ -193,4 +193,13 @@ void CookieList::printLimitedCalories(size_t maxCalories) const
 	}
 }
 
+void CookieList::printCaloriesOnly(size_t selection) const
+{
+	const Cookie& cookieChoice = getCookieLocation(--selection)->getCookie();
+
+	cout << "    calories: ";
+	cookieChoice.printCalories();
+	cout << '\n';
+}
+
 
