@@ -197,7 +197,7 @@ void CookieList::printCaloriesOnly(size_t selection) const
 {
 	const Cookie& cookieChoice = getCookieLocation(--selection)->getCookie();
 
-	cout << "    calories: ";
+	cout << "    Calories: ";
 	cookieChoice.printCalories();
 	cout << '\n';
 }
