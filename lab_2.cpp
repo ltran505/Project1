@@ -37,4 +37,3 @@ void bfs(const vector<vector<int>>& graph,
    visitedVertices = nullptr;
 }
   
-}
